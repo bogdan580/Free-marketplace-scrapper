@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Free marketplace scrapper",
+  "icons": {
+    "19": "images/logo_mini.png",
+    "38": "images/logo_mini.png",
+    "48": "images/logo_mini.png",
+    "128": "images/logo.png"
+  },
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "images/logo.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/marketplace/*"
+      ],
+      "js": [
+        "jquery-2.1.1.min.js",
+        "content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "fileSystem"
+  ]
+}
